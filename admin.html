@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Voting | ARTOTEL Batam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand brand-home" href="index.html">
+      <div class="brand-mark">A</div>
+      <div><span class="eyebrow">ARTOTEL BATAM</span><strong>VOTING ADMIN</strong></div>
+    </a>
+    <a class="admin-link" href="index.html">Halaman Vote ↗</a>
+  </header>
+  <main class="admin-main">
+    <section class="hero admin-hero">
+      <span class="pill">RESTRICTED ACCESS</span>
+      <h1>Admin <em>Dashboard</em></h1>
+      <p>Masuk untuk melihat hasil voting dan mengunduh rekap suara.</p>
+    </section>
+    <section id="loginPanel" class="login-panel">
+      <label for="adminPassword">Password admin</label>
+      <input id="adminPassword" type="password" placeholder="Masukkan password admin">
+      <button id="loginButton" class="primary-btn">Masuk Dashboard →</button>
+      <p class="small-note">Password awal: <strong>Artotelbatam</strong> — ubah di file <code>admin.js</code>.</p>
+      <p id="loginError" class="error" aria-live="polite"></p>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="dashboard-head"><div><span class="eyebrow">LIVE ON THIS BROWSER</span><h2>Rekap Hasil Voting</h2></div><button id="logoutButton" class="outline-btn">Keluar</button></div>
+      <div class="stats-grid">
+        <article class="stat-card"><span>Total suara</span><strong id="totalVotes">0</strong></article>
+        <article class="stat-card"><span>Kandidat teratas</span><strong id="leaderName">—</strong></article>
+      </div>
+      <div id="results" class="results-list"></div>
+      <div class="admin-actions"><button id="exportButton" class="primary-btn">Unduh CSV ↓</button><button id="resetButton" class="danger-btn">Reset Semua Suara</button></div>
+      <p class="small-note warning-note">Catatan: versi ini menyimpan suara di browser/perangkat yang digunakan. Untuk mengumpulkan suara dari banyak HP/komputer dan melihat hasil terpusat, diperlukan database/backend online.</p>
+    </section>
+    <footer>ARTOTEL BATAM · ADMIN PANEL</footer>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
